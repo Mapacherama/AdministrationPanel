@@ -1,5 +1,4 @@
 import Vue from "vue";
-import KeenUI from "keen-ui";
 import { createApp } from "vue";
 import { createPinia } from "pinia";
 
