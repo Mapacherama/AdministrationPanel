@@ -1,37 +1,42 @@
 <template>
-  <div class="layout-topbar">
-    <router-link to="/" class="layout-topbar-logo">
-      <img src="../assets/image/logo_cysogroup_trsp.png" alt="logo" />
-      <span>Cyso Group</span>
-    </router-link>
+  <div class="grid">
+    <div class="layout-topbar col-6">
+      <router-link to="/" class="layout-topbar-logo">
+        <img src="../assets/image/logo_cysogroup_trsp.png" alt="logo" />
+        <span>Cyso Group</span>
+      </router-link>
 
-    <button class="p-link layout-menu-button layout-topbar-button">
-      <i class="pi pi-bars"></i>
-    </button>
+      <button class="p-link layout-menu-button layout-topbar-button">
+        <i class="pi pi-bars"></i>
+      </button>
 
-    <button class="p-link layout-topbar-menu-button layout-topbar-button">
-      <i class="pi pi-ellipsis-v"></i>
-    </button>
+      <button class="p-link layout-topbar-menu-button layout-topbar-button">
+        <i class="pi pi-ellipsis-v"></i>
+      </button>
 
-    <div class="layout-topbar-menu">
-      <button class="p-link layout-topbar-button">
-        <i class="pi pi-calendar"></i>
-        <span>Calendar</span>
-      </button>
-      <button class="p-link layout-topbar-button">
-        <i class="pi pi-user"></i>
-        <span>Profile</span>
-      </button>
-      <button class="p-link layout-topbar-button">
-        <i class="pi pi-cog"></i>
-        <span>Settings</span>
-      </button>
+      <div class="layout-topbar-menu">
+        <button class="p-link layout-topbar-button">
+          <i class="pi pi-calendar"></i>
+          <span>Calendar</span>
+        </button>
+        <button class="p-link layout-topbar-button">
+          <i class="pi pi-user"></i>
+          <span>Profile</span>
+        </button>
+        <button class="p-link layout-topbar-button">
+          <i class="pi pi-cog"></i>
+          <span>Settings</span>
+        </button>
+      </div>
     </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
 /* Topbar */
+.layout-wrapper {
+  min-height: 100vh;
+}
 .layout-topbar {
   position: fixed;
   height: 5rem;

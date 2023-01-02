@@ -1,5 +1,5 @@
 <template>
-  <div class="layout-footer">
+  <div class="layout-footer col">
     <img
       src="../assets/image/logo_cysogroup_trsp.png"
       alt="Logo"
@@ -16,7 +16,11 @@
   align-items: center;
   justify-content: center;
   padding-top: 1rem;
+  padding-bottom: 0.5rem;
   border-top: 1px solid var(--surface-border);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   font-family: var(--font-family);
 }
 </style>
