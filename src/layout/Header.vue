@@ -1,14 +1,6 @@
 <template>
   <div class="grid">
     <div class="layout-topbar col-6">
-      <router-link to="/" class="layout-topbar-logo">
-        <img src="../assets/image/logo_cysogroup_trsp.png" alt="logo" />
-        <span>Cyso Group</span>
-      </router-link>
-      <Sidebar v-model:visible="visibleRight" position="right">
-        Content
-      </Sidebar>
-
       <button
         class="p-link layout-topbar-button"
         @click="visibleRight = !visibleRight"
@@ -16,6 +8,28 @@
         <i class="pi pi-bars"></i>
         <span>SideBar</span>
       </button>
+      <a href="https://cyso.group" class="layout-topbar-logo">
+        <img src="../assets/image/logo_cysogroup_trsp.png" alt="logo" />
+        <span>Cyso Group</span>
+      </a>
+      <Sidebar v-model:visible="visibleRight" position="right">
+        <div class="flex-sidebar pt-4">
+          <button class="p-link layout-topbar-button mb-4">
+            <i class="pi pi-calendar"></i>
+            <span> Calendar</span>
+          </button>
+
+          <button class="p-link layout-topbar-button mb-4">
+            <i class="pi pi-user"></i>
+            <span> Profile</span>
+          </button>
+
+          <button class="p-link layout-topbar-button">
+            <i class="pi pi-cog"></i>
+            <span> Settings</span>
+          </button>
+        </div>
+      </Sidebar>
 
       <button class="p-link layout-topbar-menu-button layout-topbar-button">
         <i class="pi pi-ellipsis-v"></i>
@@ -57,6 +71,25 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.flex-sidebar {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  flex-direction: column;
+  .pi {
+    font-size: 2rem;
+    color: var(--text-color);
+  }
+}
+
+.list-item-cell {
+  display: table-cell;
+}
+
+.list-item-cell:first-child {
+  padding-right: 10px;
+  width: 30px;
+}
 /* Topbar */
 .layout-wrapper {
   min-height: 100vh;
@@ -137,6 +170,17 @@ export default {
     .layout-topbar-button {
       margin-left: 1rem;
     }
+  }
+}
+
+.p-sidebar-content {
+  margin: 0 0 0 auto;
+  padding: 0;
+  list-style: none;
+  display: flex;
+
+  .layout-topbar-button {
+    margin-left: 1rem;
   }
 }
 
