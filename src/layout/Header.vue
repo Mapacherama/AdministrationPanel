@@ -5,9 +5,16 @@
         <img src="../assets/image/logo_cysogroup_trsp.png" alt="logo" />
         <span>Cyso Group</span>
       </router-link>
+      <Sidebar v-model:visible="visibleRight" position="right">
+        Content
+      </Sidebar>
 
-      <button class="p-link layout-menu-button layout-topbar-button">
+      <button
+        class="p-link layout-topbar-button"
+        @click="visibleRight = !visibleRight"
+      >
         <i class="pi pi-bars"></i>
+        <span>SideBar</span>
       </button>
 
       <button class="p-link layout-topbar-menu-button layout-topbar-button">
@@ -31,6 +38,23 @@
     </div>
   </div>
 </template>
+
+<script>
+import Sidebar from "primevue/sidebar";
+import Button from "primevue/button";
+
+export default {
+  components: {
+    Sidebar,
+    Button,
+  },
+  data() {
+    return {
+      visibleRight: false,
+    };
+  },
+};
+</script>
 
 <style lang="scss" scoped>
 /* Topbar */
