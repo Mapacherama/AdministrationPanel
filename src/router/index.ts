@@ -14,6 +14,11 @@ const router = createRouter({
       name: "customers",
       component: () => import("../views/CustomerOverview.vue"),
     },
+    {
+      path: "/settings",
+      name: "settings",
+      component: () => import("../views/SettingsPage.vue"),
+    },
   ],
 });
 

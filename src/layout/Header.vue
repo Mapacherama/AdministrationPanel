@@ -42,15 +42,21 @@
       </button>
 
       <div class="layout-topbar-menu">
-        <button class="p-link layout-topbar-button">
+        <button @click="$router.push('/')" class="p-link layout-topbar-button">
           <i class="pi pi-home"></i>
           <span> Home</span>
         </button>
-        <button class="p-link layout-topbar-button">
+        <button
+          @click="$router.push('customers')"
+          class="p-link layout-topbar-button"
+        >
           <i class="pi pi-user"></i>
           <span>Profile</span>
         </button>
-        <button class="p-link layout-topbar-button">
+        <button
+          @click="$router.push('/settings')"
+          class="p-link layout-topbar-button"
+        >
           <i class="pi pi-cog"></i>
           <span>Settings</span>
         </button>
