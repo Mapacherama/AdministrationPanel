@@ -14,12 +14,18 @@
       </a>
       <Sidebar v-model:visible="visibleRight" position="right">
         <div class="flex-sidebar pt-4">
-          <button class="p-link layout-topbar-button mb-4">
-            <i class="pi pi-calendar"></i>
-            <span> Calendar</span>
+          <button
+            @click="$router.push('/')"
+            class="p-link layout-topbar-button mb-4"
+          >
+            <i class="pi pi-home"></i>
+            <span> Home</span>
           </button>
 
-          <button class="p-link layout-topbar-button mb-4">
+          <button
+            @click="$router.push('customers')"
+            class="p-link layout-topbar-button mb-4"
+          >
             <i class="pi pi-user"></i>
             <span> Customers</span>
           </button>
@@ -37,8 +43,8 @@
 
       <div class="layout-topbar-menu">
         <button class="p-link layout-topbar-button">
-          <i class="pi pi-calendar"></i>
-          <span>Calendar</span>
+          <i class="pi pi-home"></i>
+          <span> Home</span>
         </button>
         <button class="p-link layout-topbar-button">
           <i class="pi pi-user"></i>
@@ -65,6 +71,22 @@ export default {
   data() {
     return {
       visibleRight: false,
+      items: [
+        {
+          label: "Calendar",
+          icon: "pi pi-calendar",
+        },
+        {
+          label: "Customers",
+          icon: "pi pi-user",
+          to: "/customers",
+        },
+        {
+          label: "Settings",
+          icon: "pi pi-cog",
+          to: "/settings",
+        },
+      ],
     };
   },
 };
