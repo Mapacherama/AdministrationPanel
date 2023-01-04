@@ -2,6 +2,7 @@
   "name": "best-vue-project",
   "version": "0.0.0",
   "private": true,
+  "proxy": "http://127.0.0.1:5173/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
