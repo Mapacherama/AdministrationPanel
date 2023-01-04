@@ -21,7 +21,7 @@
 
           <button class="p-link layout-topbar-button mb-4">
             <i class="pi pi-user"></i>
-            <span> Profile</span>
+            <span> Customers</span>
           </button>
 
           <button class="p-link layout-topbar-button">
