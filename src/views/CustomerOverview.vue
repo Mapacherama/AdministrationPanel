@@ -1,5 +1,8 @@
 <template>
-  <div class="grid mt-8">
+  <div class="grid mt-6">
+    <h1>Customer overview</h1>
+  </div>
+  <div class="grid">
     <DataTable
       :value="customers"
       :paginator="true"

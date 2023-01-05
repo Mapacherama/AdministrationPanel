@@ -8,7 +8,11 @@
         <i class="pi pi-bars"></i>
         <span>SideBar</span>
       </button>
-      <a href="https://cyso.group" class="layout-topbar-logo">
+      <a
+        href="https://cyso.group"
+        class="layout-topbar-logo"
+        style="text-decoration: none"
+      >
         <img src="../assets/image/logo_cysogroup_trsp.png" alt="logo" />
         <span>Cyso Group</span>
       </a>
