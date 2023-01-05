@@ -30,7 +30,10 @@
             <span> Customers</span>
           </button>
 
-          <button class="p-link layout-topbar-button">
+          <button
+            @click="$router.push('settings')"
+            class="p-link layout-topbar-button"
+          >
             <i class="pi pi-cog"></i>
             <span> Settings</span>
           </button>
