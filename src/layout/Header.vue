@@ -3,7 +3,7 @@
     <div class="layout-topbar col-6">
       <button
         class="p-link layout-topbar-button"
-        @click="visibleRight = !visibleRight"
+        @click="visibleLeft = !visibleLeft"
       >
         <i class="pi pi-bars"></i>
         <span>SideBar</span>
@@ -12,7 +12,7 @@
         <img src="../assets/image/logo_cysogroup_trsp.png" alt="logo" />
         <span>Cyso Group</span>
       </a>
-      <Sidebar v-model:visible="visibleRight" position="right">
+      <Sidebar v-model:visible="visibleLeft" position="left">
         <div class="flex-sidebar pt-4">
           <button
             @click="$router.push('/')"
@@ -79,7 +79,7 @@ export default {
   },
   data() {
     return {
-      visibleRight: false,
+      visibleLeft: false,
       items: [
         {
           label: "Calendar",
