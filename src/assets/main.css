@@ -23,7 +23,7 @@ label{
   font-family: var(--font-family);
 }
 
-h1 {  
+h1,h2 {  
   color: var(--text-color);
   font-family: var(--font-family);
 }
