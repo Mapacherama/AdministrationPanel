@@ -94,23 +94,25 @@
                 <br />
               </div>
 
-              <div class="field col-12 md:col-6">
+              <div class="field col-12 md:col-12">
                 <label for="oldpassword">New password</label> <br />
                 <Password class="w-full" v-model="value2" />
                 <br />
               </div>
-              <div class="field col-12 md:col-6 mb-6">
+              <div class="field col-12 md:col-12 mb-6">
                 <label for="oldpassword">New password confirmation</label>
                 <br />
                 <Password class="w-full" v-model="value2" />
-                <Button
-                  class="p-button-primary p-button-rounded ml-8 mt-2"
-                  name="information"
-                  label="Opslaan"
-                  icon="pi pi-save"
-                  iconPos="left"
-                  type="submit"
-                />
+                <div class="field col-12 md:col-12 mb-6">
+                  <Button
+                    class="p-button-primary p-button-rounded ml-8 mt-2"
+                    name="information"
+                    label="Opslaan"
+                    icon="pi pi-save"
+                    iconPos="left"
+                    type="submit"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -139,5 +141,6 @@ export default {
 <style scoped>
 .grid {
   justify-content: flex-start;
+  flex-direction: row;
 }
 </style>
