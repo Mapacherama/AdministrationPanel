@@ -94,12 +94,12 @@
                 <br />
               </div>
 
-              <div class="field col-12 md:col-4">
+              <div class="field col-12 md:col-6">
                 <label for="oldpassword">New password</label> <br />
                 <Password class="w-full" v-model="value2" />
                 <br />
               </div>
-              <div class="field col-12 md:col-4 mb-6">
+              <div class="field col-12 md:col-6 mb-6">
                 <label for="oldpassword">New password confirmation</label>
                 <br />
                 <Password class="w-full" v-model="value2" />
