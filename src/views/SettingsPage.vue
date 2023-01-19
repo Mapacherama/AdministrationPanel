@@ -135,3 +135,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.grid {
+  justify-content: flex-start;
+}
+</style>
