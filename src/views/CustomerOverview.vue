@@ -1,5 +1,5 @@
 <template>
-  <div class="grid mt-6">
+  <div class="grid mt-8">
     <h1>Customer overview</h1>
   </div>
   <div class="grid">
