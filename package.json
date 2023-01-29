@@ -12,6 +12,7 @@
   "dependencies": {
     "@vitejs/plugin-vue": "^4.0.0",
     "@vitejs/plugin-vue-jsx": "^3.0.0",
+    "chart.js": "^4.2.0",
     "pinia": "^2.0.28",
     "primeflex": "^3.2.1",
     "primeicons": "^6.0.1",

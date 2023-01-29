@@ -4,14 +4,22 @@
       <h1 >Dashboard</h1>
     </div>    
     <div class="grid">
-      <div class="col-6">
+      <div class="col-4">
         <DeviceUsageChart />
       </div>
-      <div class="col-6">
+      <div class="col-8">
         <VersionUsageChart class="chart" />
         <StackedBarChart class="chart" />
       </div>
     </div>
+    <div class="grid">
+      <div class="col-6">
+        <ScatterPlotChart class="chart"/>        
+      </div>
+      <div class="col-6">	
+        <PanelForResourceUtil class="chart" />
+      </div>
+      </div>
   </div>
 </template>
 
@@ -19,6 +27,8 @@
   import DeviceUsageChart from "../components/DeviceUsageChart.vue";
   import VersionUsageChart from "../components/VersionUsageChart.vue";
   import StackedBarChart from "../components/StackedBarChart.vue";
+  import ScatterPlotChart from "../components/ScatterPlotChart.vue";
+  import PanelForResourceUtil from "../components/PanelForResourceUtil.vue";
 </script>
 
 <style scoped>
@@ -39,7 +49,7 @@
   .grid {
     align-items: center;
     display: flex;
-    justify-content: center;
+    justify-content: start;
   }
   .chart {
     width: 100%;
