@@ -1,5 +1,8 @@
 <template>
   <div style="margin-top: 100px;" class="ml-4">
+    <head>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
     <div>
       <h1 >Dashboard</h1>
     </div>    
@@ -17,7 +20,8 @@
         <ScatterPlotChart class="chart"/>        
       </div>
       <div class="col-6">	
-        <PanelForResourceUtil class="chart" />
+        <ServerLocationPanel class="chart" />   
+        <PanelForResourceUtil class="chart" />             
       </div>
       </div>
   </div>
@@ -29,6 +33,8 @@
   import StackedBarChart from "../components/StackedBarChart.vue";
   import ScatterPlotChart from "../components/ScatterPlotChart.vue";
   import PanelForResourceUtil from "../components/PanelForResourceUtil.vue";
+  import ServerLocationPanel from "../components/ServerLocationPanel.vue";
+
 </script>
 
 <style scoped>
@@ -53,8 +59,7 @@
   }
   .chart {
     width: 100%;
+    height: auto;
   }
-  .chart-smaller {
-    width: 25%;
-  }
+
 </style>

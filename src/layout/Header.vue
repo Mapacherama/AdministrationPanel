@@ -1,6 +1,6 @@
 <template>
   <div class="grid">
-    <div class="layout-topbar col-6">
+    <div class="layout-topbar">
       <button
         class="p-link layout-topbar-button"
         @click="visibleLeft = !visibleLeft"
