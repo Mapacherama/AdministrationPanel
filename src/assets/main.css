@@ -34,6 +34,7 @@ h3 {
 }
 
 html {
+  font-family: var(--font-family);
   overflow-x: hidden;
   width: 100%;
 }
@@ -46,7 +47,6 @@ body {
 
 .grid {  
   justify-content: center;    
-  font-family: var(--font-family);
 }
 
 .margin {
@@ -67,7 +67,7 @@ body {
 
 .primary-header{
   color: var(--primary-color);
-  font-family: var(--font-family);
+  
 }
 
 .primary-header-text{
