@@ -6,7 +6,7 @@
         </template>
   
         <template #content>
-          <form @submit.prevent="login()">
+          <form @submit.prevent="submitForm">
             <label>Email</label><br />
             <InputText data-testid="email" type="text" name="email" v-model="email" required /><br />
   
@@ -53,6 +53,23 @@
         password: "",
       };
     },
-  };
+    methods: {
+    async submitForm() {
+      try {
+        const response = await axios.post("/api/login", {
+          email: this.email,
+          password: this.password,
+        });
+        if (response.data.success) {
+          // handle success response
+        } else {
+          // handle error response
+        }
+      } catch (error) {
+        // handle error
+      }
+    },
+  },
+};
   </script>
   
