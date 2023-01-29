@@ -143,7 +143,7 @@ export default {
 
 <style scoped>
 .grid {
-  justify-content: flex-start;
+  justify-content: center;
   flex-direction: row;
 }
 </style>

@@ -1,8 +1,7 @@
 <template>
-  <div class="chart">
-    <h3>Device usage count</h3>
-    <Chart type="doughnut" :data="chartData" :options="lightOptions" />
-  </div>
+
+    <Chart class="chart-small" type="doughnut" :data="chartData" :options="options" />
+
 </template>
 
 <script>
@@ -47,10 +46,8 @@ export default {
 </script>
 
 <style scoped>
-.chart {
-  width: 50%;
-  box-shadow: 1px 1px 5px 0.2px #000;
-  border-radius: 10px;
-  padding: 10px;
+
+.chart-small{
+  width: 75%;
 }
 </style>

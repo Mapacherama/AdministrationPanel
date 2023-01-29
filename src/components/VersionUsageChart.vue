@@ -1,36 +1,47 @@
-<div class="card">
-    <h5>Horizontal</h5>
-    <Chart type="bar" :data="basicData" :options="horizontalOptions" />
-</div>
+<template>
+  <div>
+    <canvas ref="lineChart"></canvas>
+  </div>
+</template>
 
 <script>
+import Chart from 'chart.js/auto';
+
 export default {
   data() {
     return {
-      basicData: {
-        labels: [
-          "January",
-          "February",
-          "March",
-          "April",
-          "May",
-          "June",
-          "July",
-        ],
+      chartData: {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June'],
         datasets: [
           {
-            label: "My First dataset",
-            backgroundColor: "#42A5F5",
-            data: [65, 59, 80, 81, 56, 55, 40],
+            label: 'Cloud Usage (GB)',
+            backgroundColor: '#f87979',
+            data: [40, 60, 80, 100, 120, 140]
           },
           {
-            label: "My Second dataset",
-            backgroundColor: "#FFA726",
-            data: [28, 48, 40, 19, 86, 27, 90],
-          },
-        ],
+            label: 'Cloud Costs ($)',
+            backgroundColor: '#7df879',
+            data: [100, 150, 200, 250, 300, 350]
+          }
+        ]
       },
-    };
+      options: {
+        responsive: true,
+        maintainAspectRatio: false
+      }
+    }
   },
-};
+  mounted() {
+    this.renderLineChart()
+  },
+  methods: {
+    renderLineChart() {
+      this.lineChart = new Chart(this.$refs.lineChart, {
+        type: 'line',
+        data: this.chartData,
+        options: this.options
+      })
+    }
+  }
+}
 </script>
