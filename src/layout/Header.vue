@@ -18,9 +18,19 @@
       </a>
       <Sidebar v-model:visible="visibleLeft" position="left">
         <div class="flex-sidebar pt-4">
+          <div style="border-bottom: 1px solid var(--surface-border);" >
+          <button
+            @click="$router.push('/login')"
+            class="p-link layout-topbar-button mb-4"
+          >
+            <i class="pi pi-users bigger-size"></i>
+            <span class="bigger-size"> Login</span>
+          </button>
+        </div>        
+
           <button
             @click="$router.push('/')"
-            class="p-link layout-topbar-button mb-4"
+            class="p-link layout-topbar-button mt-4 mb-4"
           >
             <i class="pi pi-home"></i>
             <span> Home</span>
@@ -49,6 +59,13 @@
       </button>
 
       <div class="layout-topbar-menu">
+        <button
+          @click="$router.push('/login')"
+            class="p-link layout-topbar-button p-button-lg mb-4"
+          >
+            <i class="pi pi-users mr-1 bigger-size"></i>
+            <p class="bigger-size mr-8"> Login|</p>
+        </button>
         <button @click="$router.push('/')" class="p-link layout-topbar-button">
           <i class="pi pi-home"></i>
           <span> Home</span>
@@ -115,6 +132,10 @@ export default {
     font-size: 2rem;
     color: var(--text-color);
   }
+}
+
+.bigger-size{
+  font-size: 2.5rem !important;
 }
 
 .list-item-cell {
