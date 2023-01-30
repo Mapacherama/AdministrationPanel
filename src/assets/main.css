@@ -1,52 +1,40 @@
 :root {
-  --text-color:#ff7f1f;
-  --text-color-secondary:#ca5d09;
-  --primary-color:#B9497A;
-  --primary-color-text:#FFFEFF;
-  --font-family:"Merienda", Helvetica, Arial;
-  --surface-border:#383838;
-  --primary-50:#f4fafe;
-  --primary-100:#cae6fc;
-  --primary-200:#a0d2fa;
-  --primary-300:#75bef8;
-  --primary-400:#4baaf5;
-  --primary-500:#2196f3;
-  --primary-600:#1c80cf;
-  --primary-700:#1769aa;
-  --primary-800:#125386;
-  --primary-900:#0d3c61;
-}
-
-body { margin: 0 !important; } 
-
-label{
-  font-family: var(--font-family);
-}
-
-h1,h2 {  
-  color: var(--text-color);
-  font-family: var(--font-family);
-}
-
-h3 {  
-  color: var(--text-color);
-  font-family: var(--font-family);
-}
-
-html {
-  font-family: var(--font-family);
-  overflow-x: hidden;
-  width: 100%;
+  --text-color: #ff7f1f;
+  --text-color-secondary: #ca5d09;
+  --primary-color: #B9497A;
+  --primary-color-text: #FFFEFF;
+  --font-family: "Merienda", Helvetica, Arial;
+  --surface-border: #383838;
+  --primary-50: #f4fafe;
+  --primary-100: #cae6fc;
+  --primary-200: #a0d2fa;
+  --primary-300: #75bef8;
+  --primary-400: #4baaf5;
+  --primary-500: #2196f3;
+  --primary-600: #1c80cf;
+  --primary-700: #1769aa;
+  --primary-800: #125386;
+  --primary-900: #0d3c61;
 }
 
 body {
-  overflow-x: hidden;
-  overflow-y: hidden;
-  width: 100%
-}  
+  margin: 0;
+  font-family: var(--font-family);
+}
 
-.grid {  
-  justify-content: center;    
+h1,
+h2,
+h3 {
+  color: var(--text-color);
+  font-family: var(--font-family);
+}
+
+label {
+  font-family: var(--font-family);
+}
+
+.grid {
+  justify-content: center;
 }
 
 .margin {
@@ -55,30 +43,29 @@ body {
 
 .responsive-max-width {
   max-width: 1000px;
-  width: 100%;    
-  height: auto; 
+  width: 100%;
+  height: auto;
 }
 
 .responsive {
   border-radius: 1rem;
-  width: 70%;    
-  height: auto; 
+  width: 70%;
+  height: auto;
 }
 
-.primary-header{
+.primary-header {
   color: var(--primary-color);
-  
 }
 
-.primary-header-text{
+.primary-header-text {
   color: var(--primary-color-text);
   font-family: var(--font-family);
 }
 
-.font-color-secondary{
-  color:var(--text-color-secondary)
+.font-color-secondary {
+  color: var(--text-color-secondary);
 }
 
-.margin-top{
+.margin-top {
   margin-top: 100px;
 }

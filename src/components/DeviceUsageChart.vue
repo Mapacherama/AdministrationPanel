@@ -1,5 +1,5 @@
 <template>
-
+    <h3 class="ml-4">Fascinating Device Utilization Visualization</h3>
     <Chart class="chart-small" type="doughnut" :data="chartData" :options="options" />
 
 </template>
@@ -46,8 +46,7 @@ export default {
 </script>
 
 <style scoped>
-
-.chart-small{
-  width: 75%;
+h3{
+  color: var(--text-color);
 }
 </style>
