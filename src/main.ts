@@ -13,13 +13,15 @@ import 'primeflex/primeflex.scss';
 import 'primeicons/primeicons.css';
 import './assets/main.css';
 
+import dotenv from 'dotenv';
+dotenv.config();
+
+// Base URL for GraphQL API.
+axios.defaults.baseURL = process.env.VUE_APP_API_URL
 
 const app = createApp(App);
 app.use(createPinia());
 app.use(router);
 app.use(PrimeVue, { ripple: true });
-
-// Base URL for GraphQL API.
-axios.defaults.baseURL = import.meta.env.VITE_AXIOS_BASE_URL
 
 app.mount('#app');
