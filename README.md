@@ -1,68 +1,54 @@
-# Best-Vue-Project
+ # Administrator Panel
 
-This template should help get you started developing with Vue 3 in Vite.
+A front-end for a GraphQL API administrator panel, built using Vue.js 3, PrimeVue, Bootstrap, and chart.js.
 
-## Recommended IDE Setup
+# Getting Started
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+Prerequisites
 
-## Type Support for `.vue` Imports in TS
+You will need the following software installed on your system:
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+    Node.js
+    npm
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+Installation
 
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+1. Clone the repository to your local machine.
 
-## Customize configuration
+        git clone https://github.com/Mapacherama/GraphQL-API-Administrator-Panel.git
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+2. Navigate to the project directory.
 
-## Project Setup
+        cd GraphQL-API-Administrator-Panel
 
-```sh
-npm install
-```
+3. Install the dependencies.
 
-### Compile and Hot-Reload for Development
+        npm install
 
-```sh
-npm run dev
-```
+4. Start the development server.
 
-### Type-Check, Compile and Minify for Production
+        npm run serve
 
-```sh
-npm run build
-```
+The application will be available at `http://localhost:8080/`.
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+# Built With
 
-```sh
-npm run test:unit
-```
+[Vue.js 3](https://vuejs.org/) - The Progressive JavaScript Framework
+[PrimeVue](https://primevue.org/setup) - A Vue.js UI Library
+[Bootstrap](https://getbootstrap.com/) - A popular CSS framework
+[chart.js](https://www.chartjs.org/) - A JavaScript charting library
 
-### Run End-to-End Tests with [Cypress](https://www.cypress.io/)
+# Contributing
 
-```sh
-npm run test:e2e:dev
-```
+Contributions are what make the open-source community such an amazing place to be learn, inspire, and create. Any contributions you make are greatly appreciated.
 
-This runs the end-to-end tests against the Vite development server.
-It is much faster than the production build.
+    Fork the Project
+    Create your Feature Branch (git checkout -b feature/AmazingFeature)
+    Commit your Changes (git commit -m 'Add some AmazingFeature')
+    Push to the Branch (git push origin feature/AmazingFeature)
+    Open a Pull Request
 
-But it's still recommended to test the production build with `test:e2e` before deploying (e.g. in CI environments):
+# License
 
-```sh
-npm run build
-npm run test:e2e
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+This project is licensed under the MIT License - see the LICENSE file for details.
