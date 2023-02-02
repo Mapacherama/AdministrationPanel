@@ -34,10 +34,10 @@ The application will be available at `http://localhost:8080/`.
 
 # Built With
 
-[Vue.js 3](https://vuejs.org/) - The Progressive JavaScript Framework
-[PrimeVue](https://primevue.org/setup) - A Vue.js UI Library
-[Bootstrap](https://getbootstrap.com/) - A popular CSS framework
-[chart.js](https://www.chartjs.org/) - A JavaScript charting library
+- [Vue.js 3](https://vuejs.org/) - The Progressive JavaScript Framework
+- [PrimeVue](https://primevue.org/setup) - A Vue.js UI Library
+- [Bootstrap](https://getbootstrap.com/) - A popular CSS framework
+- [chart.js](https://www.chartjs.org/) - A JavaScript charting library
 
 # Contributing
 
