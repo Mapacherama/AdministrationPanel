@@ -26,7 +26,7 @@ export const useUserStore = defineStore("UserStore", {
       
             const query = 
             `  mutation{
-                login(password:"${password}", username:"${username}"){
+                login(username:"${username}", password:"${password}" ){
                   success
                 }
                 }`
