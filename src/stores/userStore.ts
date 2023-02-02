@@ -45,11 +45,12 @@ export const useUserStore = defineStore("UserStore", {
               }
             })   
             .catch(error => {
-              this.errors.signIn = [error.message]
+              console.log(error)
             })
       
             localStorage.removeItem('redirectUrl')
-            this.fetchCurrentUser()
+            // TODO Write query for getting a logged in user!
+            // this.fetchCurrentUser()
           },
     },
 });
