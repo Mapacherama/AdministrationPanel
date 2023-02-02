@@ -1,8 +1,8 @@
 import axios from "axios"
-import router from '../src/router/index'
+import router from '../router/index'
 
 import { defineStore } from "pinia"
-import { errorHandler } from "../src/helpers/request"
+import { errorHandler } from "../helpers/request"
 
 export const useUserStore = defineStore("UserStore", {
     state: () => ({
@@ -36,8 +36,9 @@ export const useUserStore = defineStore("UserStore", {
               query: query
             })
             .then(response => {
-              this.errors.signIn = errorHandler(response)
-              if (this.errors.signIn == null) {
+              const success = response.data.data.login.success
+              console.log(success)
+              if (success) {
                 const login = response.data.data.login
                 localStorage.setItem("username", username);
                 router.push({ path: `/${redirectUrl}` })

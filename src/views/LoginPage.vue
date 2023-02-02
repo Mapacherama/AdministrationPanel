@@ -6,9 +6,9 @@
         </template>
   
         <template #content>
-          <form @submit.prevent="submitForm">
-            <label>Email</label><br />
-            <InputText data-testid="email" type="text" name="email" v-model="email" required /><br />
+          <form @submit.prevent="login()">
+            <label>Username</label><br />
+            <InputText data-testid="username" type="text" name="username" v-model="username" required /><br />
   
             <label>Wachtwoord</label><br />
             <Password name="password" v-model="password" :feedback="false" required /><br /><br />
@@ -38,6 +38,7 @@
   import InputText from "primevue/inputtext";
   import Message from "primevue/message";
   import Password from "primevue/password";
+  import { useUserStore } from "../stores/userStore";
   
   export default {
     components: {
@@ -47,27 +48,19 @@
       Message,
       Password,
     },
-    data() {
-      return {
-        email: "",
-        password: "",
-      };
+    setup() {
+      const userStore = useUserStore();
+      return { userStore };
     },
-    methods: {
-    async submitForm() {
-      try {
-        const response = await axios.post("/api/login", {
-          email: this.email,
-          password: this.password,
-        });
-        if (response.data.success) {
-          // handle success response
-        } else {
-          // handle error response
-        }
-      } catch (error) {
-        // handle error
-      }
+    data() {
+    return {
+      username: "",
+      password: "",
+    };
+  },
+  methods: {
+    async login() {
+      await this.userStore.logIn(this.username, this.password);
     },
   },
 };
