@@ -4,6 +4,10 @@ import router from '../router/index'
 import { defineStore } from "pinia"
 import { errorHandler } from "../helpers/request"
 
+const api = axios.create({
+  baseURL: import.meta.env.VUE_APP_API_URL
+});
+
 export const useUserStore = defineStore("UserStore", {
     state: () => ({
         user: null,
@@ -35,7 +39,7 @@ export const useUserStore = defineStore("UserStore", {
                 payload
                 }
               }`
-            await axios
+            await api
             .post('/graphql/', {
               headers: headers,
               query: query

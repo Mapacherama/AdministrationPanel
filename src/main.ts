@@ -14,7 +14,9 @@ import 'primeicons/primeicons.css';
 import './assets/main.css';
 
 // Base URL for GraphQL API.
-axios.defaults.baseURL = import.meta.env.VUE_APP_API_URL
+axios.defaults.baseURL = 'http://127.0.0.1:8000'
+
+console.log(axios.defaults.baseURL)
 
 const app = createApp(App);
 app.use(createPinia());
