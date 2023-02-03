@@ -7,6 +7,9 @@ import { errorHandler } from "../helpers/request"
 export const useUserStore = defineStore("UserStore", {
     state: () => ({
         user: null,
+        errors: {
+          logIn: null,
+        },
       }),
 
       getters: {
@@ -18,29 +21,31 @@ export const useUserStore = defineStore("UserStore", {
     actions: {
         async logIn(username, password) {
             let redirectUrl = localStorage.getItem('redirectUrl')
-            redirectUrl = redirectUrl ? redirectUrl : ''
+            redirectUrl = redirectUrl ? redirectUrl : '/settings'
       
             const headers = {
               "content-type": "application/json"
             }
-      
+            
             const query = 
             `  mutation{
-                login(username:"${username}", password:"${password}" ){
-                  success
+              tokenAuth(username:"${username}", password:"${password}" ){
+                token
+                refreshExpiresIn
+                payload
                 }
-                }`
+              }`
             await axios
             .post('/graphql/', {
               headers: headers,
               query: query
             })
-            .then(response => {
-              const success = response.data.data.login.success
-              console.log(success)
-              if (success) {
-                const login = response.data.data.login
+            .then(response => {   
+              this.errors.logIn = errorHandler(response)           
+              if (this.errors.logIn == null) {
+                const tokenAuth = response.data.data.tokenAuth
                 localStorage.setItem("username", username);
+                this.stateStore.setToken(tokenAuth.token, tokenAuth.payload.exp)
                 router.push({ path: `/${redirectUrl}` })
               }
             })   
@@ -50,7 +55,7 @@ export const useUserStore = defineStore("UserStore", {
       
             localStorage.removeItem('redirectUrl')
             // TODO Write query for getting a logged in user!
-            // this.fetchCurrentUser()
+            this.fetchCurrentUser()
           },
     },
 });
