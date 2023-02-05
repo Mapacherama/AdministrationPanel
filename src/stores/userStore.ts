@@ -13,6 +13,7 @@ export const useUserStore = defineStore("UserStore", {
         user: null,
         errors: {
           logIn: null,
+          fetchCurrentUser: null,
         },
       }),
 
@@ -47,10 +48,8 @@ export const useUserStore = defineStore("UserStore", {
             .then(response => {   
               this.errors.logIn = errorHandler(response)           
               if (this.errors.logIn == null) {
-                const tokenAuth = response.data.data.tokenAuth
                 localStorage.setItem("username", username);
-                this.stateStore.setToken(tokenAuth.token, tokenAuth.payload.exp)
-                router.push({ path: `/${redirectUrl}` })
+                router.push({ path: `${redirectUrl}` })
               }
             })   
             .catch(error => {
@@ -60,6 +59,36 @@ export const useUserStore = defineStore("UserStore", {
             localStorage.removeItem('redirectUrl')
             // TODO Write query for getting a logged in user!
             this.fetchCurrentUser()
+          },
+
+          async fetchCurrentUser() {
+            const headers = {
+              "content-type": "application/json"
+            };
+      
+            const query = 
+              `query whoAmI {
+                  whoAmI {
+                    firstName
+                    lastName
+                    email 
+                }
+              }`
+      
+            await axios
+            .post('/graphql/', {
+              headers: headers,
+              query: query
+            })
+            .then(response => {
+              this.errors.fetchCurrentUser = errorHandler(response)
+              if (this.errors.fetchCurrentUser == null) {
+                this.user = response.data.data.whoAmI
+              }
+            })
+            .catch(error => {
+              this.errors.fetchCurrentUser = [error.message]
+            })
           },
     },
 });
